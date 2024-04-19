@@ -1,5 +1,6 @@
 package com.example.gitnubpr;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -11,14 +12,16 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
     }
+
     public void onClick(View view) {
         GitHubService gitHubService = GitHubService.retrofit.create(GitHubService.class);
         final Call<List<Contributor>> call =
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
                 builderName.append("Васильева настя");
                 //textView.setText(response.body().toString());
-               textView.setText(builderName.toString());
+                textView.setText(builderName.toString());
 
             }
 
@@ -50,5 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 textView.setText("Что-то пошло не так: " + throwable.getMessage());
             }
         });
+    }
+    public void Next(View v)
+    {
+        Intent intent = new Intent(getApplicationContext(), MainActivityPrDva.class);
+        startActivity(intent);
     }
 }

@@ -1,6 +1,7 @@
 package com.example.gitnubpr;
 
 class Contributor {
+
     private String login;
     private int contributions;
 
@@ -9,6 +10,6 @@ class Contributor {
 
     @Override
     public String toString() {
-        return login + "           (" + contributions + ")";
+        return login + "         (" + contributions + ")";
     }
 }

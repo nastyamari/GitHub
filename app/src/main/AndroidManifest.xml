@@ -22,6 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.gitnubpr.MainActivityPrDva" />
+        <activity android:name="com.example.gitnubpr.MainActivityPrTri" />
+        <activity android:name="com.example.gitnubpr.MainActivityPrChet" />
     </application>
 
 </manifest>
